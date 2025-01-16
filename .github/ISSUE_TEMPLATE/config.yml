@@ -3,6 +3,6 @@ contact_links:
   - name: "Customer Requests"
     url: "https://external-portal-link.com"
     about: >
-      Customer feature requests are only accepted through the APIM Internal Repository. 
+      Customer feature requests are only accepted through the [APIM Internal Repository](https://github.com/wso2-enterprise/wso2-apim-internal). 
       Please visit the linked portal to submit feature requests. 
       We will carefully review your request, understand the specific problem of the cystomer, and ensure it addresses broader or strategic requirements before incorporating it into the product management process.  
