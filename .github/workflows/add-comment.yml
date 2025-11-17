@@ -1,0 +1,47 @@
+name: Add Issue Comment for Type/Patch
+
+on:
+  issues:
+    types: [opened, labeled]
+
+permissions:
+  issues: write
+
+jobs:
+  add-issue-comment:
+    runs-on: ubuntu-latest
+    if: >
+      (github.event.action == 'opened' && contains(join(github.event.issue.labels.*.name, ','), 'Type/Patch'))
+      || (github.event.action == 'labeled' && github.event.label.name == 'Type/Patch')
+    steps:
+      - name: Create or update checklist comment
+        uses: peter-evans/create-or-update-comment@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          issue-number: ${{ github.event.issue.number }}
+          body: |-
+            - Security Concern: Any new security risks involved?
+
+              Answer:
+
+            - DB Query/Script: Are there any database query or script changes?
+
+              Answer:
+
+            - Migration/Behavioral Impact: Is data migration impacted, or are there changes to existing user/application behavior?
+
+              Answer:
+
+            - Configuration Added: Are any new config settings/environment variables required?
+
+              Answer:
+
+            - Doc Change: Has relevant documentation been updated?
+
+              Answer:
+
+            - Method Signature: Were any existing method signatures changed?
+
+              Answer:
+          edit-mode: replace
+          identifier: type-patch-checklist
