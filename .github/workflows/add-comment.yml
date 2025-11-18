@@ -22,15 +22,15 @@ jobs:
           body: |-
             | Review Checklist |
             |---|
-            | **⚠️ SECURITY CONCERN:** Any new security risks involved? |
+            | **Security Impact:** Any security risks involved? |
             | **Answer:** |
             | **DB Query/Script:** Are there any database query or script changes? |
             | **Answer:** |
-            | **Migration/Behavioral Impact:** Is data migration impacted, or are there changes to existing user/application behavior? |
+            | **Migration/Behavioral Impact:** Is data migration impacted, or are there changes to existing product behavior? |
             | **Answer:** |
             | **Configuration Added:** Are any new config settings/environment variables required? |
             | **Answer:** |
-            | **Doc Change:** Has relevant documentation been updated? |
+            | **Doc Change:** Is there a documentation update required? Has relevant documentation been updated? |
             | **Answer:** |
             | **Method Signature:** Were any existing method signatures changed? |
             | **Answer:** |
